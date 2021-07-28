@@ -8,7 +8,7 @@ RUN mvn package
 FROM java
 WORKDIR /opt
 COPY --from=firstStep /opt/target/* /opt/
-
+CMD java -jar my-app-1.0-SNAPSHOT.jar
 
 
 
