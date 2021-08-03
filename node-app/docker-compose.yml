@@ -3,6 +3,8 @@ services:
   redis-server:
     image: 'redis'
   node-app:
-    build: .
+    build:
+      dockerfile: 'Dockerfile'
+      context: .
     ports:
       - '4001:8081'
